@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year - For Shaunagh</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f9f1e7;
+            background-image: url('https://images.unsplash.com/photo-1517299321609-52687d1bc55a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=10');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #5a3921;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .snowflake {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .card-container {
+            background: rgba(255, 253, 248, 0.92);
+            width: 90%;
+            max-width: 700px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(166, 87, 41, 0.25);
+            border: 12px solid transparent;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-image: linear-gradient(45deg, #d4a574, #8b4513, #d4a574) 1;
+            animation: gentleGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes gentleGlow {
+            from { box-shadow: 0 15px 40px rgba(166, 87, 41, 0.2); }
+            to { box-shadow: 0 25px 70px rgba(166, 87, 41, 0.4); }
+        }
+
+        .card-container:before {
+            content: "";
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, #ffd700, #8b4513, #d4a574, #ffd700);
+            z-index: -1;
+            border-radius: 22px;
+        }
+
+        .horse-head {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 30px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="M50,100 Q30,50 50,30 Q80,10 100,30 Q120,10 150,30 Q170,50 150,100 Q130,150 100,170 Q70,150 50,100Z" fill="%238b4513" stroke="%23d4a574" stroke-width="4"/><path d="M80,50 Q60,40 70,20 Q90,15 100,35 Q110,15 130,20 Q140,40 120,50 Q105,65 100,80 Q95,65 80,50Z" fill="%23f9f1e7"/><ellipse cx="85" cy="45" rx="8" ry="10" fill="%235a3921"/><ellipse cx="115" cy="45" rx="8" ry="10" fill="%235a3921"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: drop-shadow(5px 5px 10px rgba(139, 69, 19, 0.5));
+        }
+
+        h1 {
+            font-family: 'Brush Script MT', cursive;
+            color: #8b4513;
+            font-size: 3.2em;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .message {
+            font-size: 1.4em;
+            line-height: 1.7;
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(255, 248, 225, 0.6);
+            border-radius: 15px;
+            border-left: 5px solid #d4a574;
+            font-style: italic;
+        }
+
+        .blessing-button {
+            background: linear-gradient(to bottom, #d4a574, #8b4513);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 25px 0;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 6px 12px rgba(139, 69, 19, 0.3);
+        }
+
+        .blessing-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 18px rgba(139, 69, 19, 0.4);
+            background: linear-gradient(to bottom, #e0b686, #9c5d34);
+        }
+
+        #blessingText {
+            min-height: 60px;
+            font-size: 1.2em;
+            color: #5a3921;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 253, 248, 0.8);
+            border-radius: 10px;
+            border: 1px dashed #d4a574;
+            transition: opacity 0.5s ease;
+        }
+
+        .chinese-decoration {
+            font-family: 'KaiTi', 'STKaiti', serif;
+            color: #b22222;
+            font-size: 1.8em;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #8b4513;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <!-- 马头图案 -->
+        <div class="horse-head"></div>
+
+        <!-- 主标题 -->
+        <h1>Happy New Year 2026</h1>
+
+        <!-- 装饰性中文 -->
+        <div class="chinese-decoration">甲午 • 马到成功</div>
+
+        <!-- 个人信息祝福区域 -->
+        <div class="message">
+            Dear Shaunagh,<br>
+            As the Year of the Horse approaches,<br>
+            may it bring you strength, joy, and success.<br>
+            Wishing you a wonderful year ahead!
+        </div>
+
+        <!-- 互动祝福按钮 -->
+        <button class="blessing-button" onclick="showBlessing()">Click for a Special Blessing 🐎</button>
+
+        <!-- 祝福语显示区域 -->
+        <div id="blessingText">
+            A blessing will appear here...
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer">
+            With warmest wishes for the New Year. ❄️
+        </div>
+    </div>
+
+    <script>
+        // 生成雪花
+        function createSnowflakes() {
+            const snowflakeCount = 60;
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+
+                const size = Math.random() * 10 + 5;
+                snowflake.style.width = `${size}px`;
+                snowflake.style.height = `${size}px`;
+                snowflake.style.left = `${Math.random() * 100}vw`;
+                snowflake.style.opacity = Math.random() * 0.7 + 0.3;
+                snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                snowflake.style.animationDelay = `${Math.random() * 2}s`;
+                snowflake.style.animationTimingFunction = `cubic-bezier(${Math.random()}, ${Math.random()}, ${Math.random()}, ${Math.random()})`;
+                snowflake.style.animationName = 'fall';
+
+                document.body.appendChild(snowflake);
+            }
+
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes fall {
+                    to {
+                        transform: translateY(100vh) rotate(360deg);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // 祝福语库
+        const blessings = [
+            { en: "May the Horse bring you victory in all your races.", zh: "愿马年助您在所有竞赛中旗开得胜。" },
+            { en: "Gallop into a year filled with adventure and prosperity.", zh: "驰骋进入充满冒险与繁荣的一年。" },
+            { en: "Strength and grace of the horse be with you throughout the year.", zh: "愿马的力量与优雅伴您一整年。" },
+            { en: "New beginnings and a steady path forward in the Year of the Horse.", zh: "马年新始，前路坦途。" },
+            { en: "May your spirit run as free and joyful as a wild horse.", zh: "愿您的精神如野马般自由欢腾。" }
+        ];
+
+        // 显示随机祝福
+        function showBlessing() {
+            const blessingText = document.getElementById('blessingText');
+            const randomIndex = Math.floor(Math.random() * blessings.length);
+            const selectedBlessing = blessings[randomIndex];
+
+            blessingText.innerHTML = `
+                <strong>🐎 "${selectedBlessing.en}"</strong><br>
+                <em>${selectedBlessing.zh}</em>
+            `;
+            blessingText.style.opacity = 0;
+            setTimeout(() => { blessingText.style.opacity = 1; }, 10);
+        }
+
+        // 页面加载完成后初始化雪花和祝福语
+        window.onload = function() {
+            createSnowflakes();
+            setTimeout(showBlessing, 800);
+        };
+    </script>
+
+</body>
+</html>
